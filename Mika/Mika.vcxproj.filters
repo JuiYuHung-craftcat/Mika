@@ -27,9 +27,15 @@
     <ClInclude Include="src\Mika\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Mika\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Mika\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mika\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
