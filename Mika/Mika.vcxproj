@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MIKA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -101,7 +101,7 @@ IF EXIST ..\bin\Debug-windows-x86_64\Mika\Mika.dll\ (xcopy /Q /E /Y /I ..\bin\De
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MIKA_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -127,7 +127,7 @@ IF EXIST ..\bin\Release-windows-x86_64\Mika\Mika.dll\ (xcopy /Q /E /Y /I ..\bin\
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>MK_PLATFORM_WINDOWS;MK_BUILD_DLL;MIKA_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -153,6 +153,10 @@ IF EXIST ..\bin\Dist-windows-x86_64\Mika\Mika.dll\ (xcopy /Q /E /Y /I ..\bin\Dis
     <ClInclude Include="src\Mika\Application.h" />
     <ClInclude Include="src\Mika\Core.h" />
     <ClInclude Include="src\Mika\EntryPoint.h" />
+    <ClInclude Include="src\Mika\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Mika\Events\Event.h" />
+    <ClInclude Include="src\Mika\Events\KeyEvent.h" />
+    <ClInclude Include="src\Mika\Events\MouseEvent.h" />
     <ClInclude Include="src\Mika\Log.h" />
   </ItemGroup>
   <ItemGroup>

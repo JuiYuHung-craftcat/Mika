@@ -4,6 +4,9 @@
     <Filter Include="Mika">
       <UniqueIdentifier>{8715897C-734C-8A0D-1C39-7010084F060F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Mika\Events">
+      <UniqueIdentifier>{8B630CB1-F718-85A6-800D-7F7DECC17BAA}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Mika.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Mika\EntryPoint.h">
       <Filter>Mika</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mika\Events\ApplicationEvent.h">
+      <Filter>Mika\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mika\Events\Event.h">
+      <Filter>Mika\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mika\Events\KeyEvent.h">
+      <Filter>Mika\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mika\Events\MouseEvent.h">
+      <Filter>Mika\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Mika\Log.h">
       <Filter>Mika</Filter>
