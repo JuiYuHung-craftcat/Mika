@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Mike {
 
 	class MIKA_API KeyEvent : public Event

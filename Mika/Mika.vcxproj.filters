@@ -34,6 +34,7 @@
     <ClInclude Include="src\Mika\Log.h">
       <Filter>Mika</Filter>
     </ClInclude>
+    <ClInclude Include="src\mkpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Mika\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Mika\Log.cpp">
       <Filter>Mika</Filter>
     </ClCompile>
+    <ClCompile Include="src\mkpch.cpp" />
   </ItemGroup>
 </Project>

@@ -1,3 +1,4 @@
+#include "mkpch.h"
 #include "Application.h"
 
 #include "Mika/Events/ApplicationEvent.h"

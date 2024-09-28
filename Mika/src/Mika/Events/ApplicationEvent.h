@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Mika {
 
 	class MIKA_API WindowResizeEvent : public Event

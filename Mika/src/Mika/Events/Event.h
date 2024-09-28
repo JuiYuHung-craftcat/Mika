@@ -1,9 +1,8 @@
 #pragma once
 
+#include "mkpch.h"
 #include "Mika/Core.h"
 
-#include <string>
-#include <functional>
 
 namespace Mika {
 

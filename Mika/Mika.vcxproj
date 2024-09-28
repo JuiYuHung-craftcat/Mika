@@ -158,10 +158,12 @@ IF EXIST ..\bin\Dist-windows-x86_64\Mika\Mika.dll\ (xcopy /Q /E /Y /I ..\bin\Dis
     <ClInclude Include="src\Mika\Events\KeyEvent.h" />
     <ClInclude Include="src\Mika\Events\MouseEvent.h" />
     <ClInclude Include="src\Mika\Log.h" />
+    <ClInclude Include="src\mkpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Mika\Application.cpp" />
     <ClCompile Include="src\Mika\Log.cpp" />
+    <ClCompile Include="src\mkpch.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

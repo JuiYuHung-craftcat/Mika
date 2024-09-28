@@ -18,6 +18,9 @@ project "Mika"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "mkpch.h"
+	pchsource "Mika/src/mkpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
