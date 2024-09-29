@@ -2,7 +2,6 @@
 #include "Application.h"
 
 #include "Mika/Events/ApplicationEvent.h"
-#include "Mika/Log.h"
 
 #include <GLFW/glfw3.h>
 
