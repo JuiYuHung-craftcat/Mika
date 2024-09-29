@@ -14,6 +14,8 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Mika/vendor/GLFW/include"
 
+startproject "Sandbox"
+
 include "Mika/vendor/GLFW"
 
 project "Mika"
@@ -43,12 +45,13 @@ project "Mika"
 	links
 	{
 		"GLFW",
-		"opengl32.lib"
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "off"
 		systemversion "latest"
 
 		defines

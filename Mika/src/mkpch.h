@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Mika/Log.h"
+
 #ifdef MK_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
