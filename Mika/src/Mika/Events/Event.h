@@ -3,7 +3,6 @@
 #include "mkpch.h"
 #include "Mika/Core.h"
 
-
 namespace Mika {
 
 	enum class EventType
