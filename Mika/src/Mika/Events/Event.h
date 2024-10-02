@@ -77,4 +77,18 @@ namespace Mika {
 	{
 		return os << e.ToString();
 	}
+	
+	template<typename T>
+	struct fmt::formatter<
+		T, std::enable_if_t<std::is_base_of<Event, T>::value, char>>
+		: fmt::formatter<std::string> {
+		auto format(const T& event, fmt::format_context& ctx) {
+			return fmt::format_to(ctx.out(), "{}", event.ToString());
+		}
+	};
+
+	template <typename... T>
+	std::string StringFromArgs(fmt::format_string<T...> fmt, T&&... args) {
+		return fmt::format(fmt, std::forward<T>(args)...);
+	}
 }
