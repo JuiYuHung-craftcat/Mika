@@ -83,7 +83,8 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -110,7 +111,8 @@ IF EXIST ..\bin\Debug-windows-x86_64\Mika\Mika.dll\ (xcopy /Q /E /Y /I ..\bin\De
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -138,7 +140,8 @@ IF EXIST ..\bin\Release-windows-x86_64\Mika\Mika.dll\ (xcopy /Q /E /Y /I ..\bin\
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -163,6 +166,8 @@ IF EXIST ..\bin\Dist-windows-x86_64\Mika\Mika.dll\ (xcopy /Q /E /Y /I ..\bin\Dis
     <ClInclude Include="src\Mika\Events\Event.h" />
     <ClInclude Include="src\Mika\Events\KeyEvent.h" />
     <ClInclude Include="src\Mika\Events\MouseEvent.h" />
+    <ClInclude Include="src\Mika\LayerStack.h" />
+    <ClInclude Include="src\Mika\Layer.h" />
     <ClInclude Include="src\Mika\Log.h" />
     <ClInclude Include="src\Mika\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -170,6 +175,8 @@ IF EXIST ..\bin\Dist-windows-x86_64\Mika\Mika.dll\ (xcopy /Q /E /Y /I ..\bin\Dis
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Mika\Application.cpp" />
+    <ClCompile Include="src\Mika\Layer.cpp" />
+    <ClCompile Include="src\Mika\LayerStack.cpp" />
     <ClCompile Include="src\Mika\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mkpch.cpp">
