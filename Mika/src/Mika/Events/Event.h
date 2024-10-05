@@ -24,7 +24,7 @@ namespace Mika {
 		EventCategoryMouseButton    = BIT(4) 
 	};
 
-#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
+#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type; }\
 		virtual EventType GetEventType() const override { return GetStaticType(); }\
 		virtual const char* GetName() const override { return #type; }
 
@@ -75,18 +75,18 @@ namespace Mika {
 	{
 		return os << e.ToString();
 	}
-	
-	template<typename T>
-	struct fmt::formatter<
-		T, std::enable_if_t<std::is_base_of<Event, T>::value, char>>
-		: fmt::formatter<std::string> {
-		auto format(const T& event, fmt::format_context& ctx) const {
-			return fmt::format_to(ctx.out(), "{}", event.ToString());
-		}
-	};
-
-	//template <typename... T>
-	//std::string StringFromArgs(fmt::format_string<T...> fmt, T&&... args) {
-	//	return fmt::format(fmt, std::forward<T>(args)...);
-	//}
 }
+
+template<typename T>
+struct fmt::formatter<
+	T, std::enable_if_t<std::is_base_of<Mika::Event, T>::value, char>>
+	: fmt::formatter<std::string> {
+	auto format(const T& event, fmt::format_context& ctx) const {
+		return fmt::format_to(ctx.out(), "{}", event.ToString());
+	}
+};
+
+//template <typename... T>
+//std::string StringFromArgs(fmt::format_string<T...> fmt, T&&... args) {
+//	return fmt::format(fmt, std::forward<T>(args)...);
+//}
