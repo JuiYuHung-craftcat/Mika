@@ -13,10 +13,14 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Mika/vendor/GLFW/include"
+IncludeDir["Glad"] = "Mika/vendor/Glad/include"
+IncludeDir["ImGui"] = "Mika/vendor/imgui"
 
 startproject "Sandbox"
 
 include "Mika/vendor/GLFW"
+include "Mika/vendor/Glad"
+include "Mika/vendor/imgui"
 
 project "Mika"
 	location "Mika"
@@ -39,25 +43,30 @@ project "Mika"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib",
 		"dwmapi.lib"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "on"
+		staticruntime "On"
 		systemversion "latest"
 
 		defines
 		{
 			"MK_PLATFORM_WINDOWS",
-			"MK_BUILD_DLL"
+			"MK_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands

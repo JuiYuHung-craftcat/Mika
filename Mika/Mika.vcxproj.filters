@@ -37,6 +37,12 @@
     <ClInclude Include="src\Mika\Events\MouseEvent.h">
       <Filter>Mika\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Mika\Layer.h">
+      <Filter>Mika</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mika\LayerStack.h">
+      <Filter>Mika</Filter>
+    </ClInclude>
     <ClInclude Include="src\Mika\Log.h">
       <Filter>Mika</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Mika\Application.cpp">
+      <Filter>Mika</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mika\Layer.cpp">
+      <Filter>Mika</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mika\LayerStack.cpp">
       <Filter>Mika</Filter>
     </ClCompile>
     <ClCompile Include="src\Mika\Log.cpp">
