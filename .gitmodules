@@ -4,3 +4,6 @@
 [submodule "Mika/vendor/GLFW"]
 	path = Mika/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Mika/vendor/imgui"]
+	path = Mika/vendor/imgui
+	url = https://github.com/JuiYuHung-craftcat/imgui
