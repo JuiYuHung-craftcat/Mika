@@ -6,6 +6,8 @@
 #include "Mika/Layer.h"
 #include "Mika/Log.h"
 
+#include "Mika/ImGui/ImGuiLayer.h"
+
 // ---Entry Point------------------------
 #include "Mika/EntryPoint.h"
 // --------------------------------------

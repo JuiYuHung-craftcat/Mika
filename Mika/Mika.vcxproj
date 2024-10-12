@@ -166,18 +166,22 @@ IF EXIST ..\bin\Dist-windows-x86_64\Mika\Mika.dll\ (xcopy /Q /E /Y /I ..\bin\Dis
     <ClInclude Include="src\Mika\Events\Event.h" />
     <ClInclude Include="src\Mika\Events\KeyEvent.h" />
     <ClInclude Include="src\Mika\Events\MouseEvent.h" />
+    <ClInclude Include="src\Mika\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Mika\Layer.h" />
     <ClInclude Include="src\Mika\LayerStack.h" />
     <ClInclude Include="src\Mika\Log.h" />
     <ClInclude Include="src\Mika\Window.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\mkpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Mika\Application.cpp" />
+    <ClCompile Include="src\Mika\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Mika\Layer.cpp" />
     <ClCompile Include="src\Mika\LayerStack.cpp" />
     <ClCompile Include="src\Mika\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mkpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
