@@ -10,6 +10,10 @@
 	#error Mika only supports Windows!
 #endif
 
+#ifdef MK_DEBUG
+	#define MK_ENABLE_ASSERTS
+#endif
+
 #ifdef MK_ENABLE_ASSERTS
 	#define MIKA_ASSERT(x, ...) { if(!(x)) { MIKE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define MIKA_CORE_ASSERT(x, ...) { if(!(x)) { MIKE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
