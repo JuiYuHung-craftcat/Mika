@@ -1,5 +1,6 @@
 workspace "Mika"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -16,8 +17,6 @@ IncludeDir["GLFW"] = "Mika/vendor/GLFW/include"
 IncludeDir["Glad"] = "Mika/vendor/Glad/include"
 IncludeDir["ImGui"] = "Mika/vendor/imgui"
 
-startproject "Sandbox"
-
 include "Mika/vendor/GLFW"
 include "Mika/vendor/Glad"
 include "Mika/vendor/imgui"
@@ -26,6 +25,7 @@ project "Mika"
 	location "Mika"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -59,7 +59,6 @@ project "Mika"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -71,29 +70,29 @@ project "Mika"
 
 		postbuildcommands
 		{
-			("{MKDIR} ../bin/" .. outputdir .. "/Sandbox"),
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
 		defines "MIKA_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "MIKA_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "MIKA_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -117,7 +116,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -127,15 +125,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "MIKA_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "MIKA_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "MIKA_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
