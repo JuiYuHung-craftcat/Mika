@@ -16,6 +16,8 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Mika/vendor/GLFW/include"
 IncludeDir["Glad"] = "Mika/vendor/Glad/include"
 IncludeDir["ImGui"] = "Mika/vendor/imgui"
+IncludeDir["glm"] = "Mika/vendor/glm"
+
 
 include "Mika/vendor/GLFW"
 include "Mika/vendor/Glad"
@@ -36,7 +38,9 @@ project "Mika"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -45,7 +49,8 @@ project "Mika"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+	    "%{IncludeDir.glm}"
 	}
 
 	links
@@ -106,7 +111,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Mika/vendor/spdlog/include",
-		"Mika/src"
+		"Mika/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links
