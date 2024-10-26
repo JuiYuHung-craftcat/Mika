@@ -7,3 +7,6 @@
 [submodule "Mika/vendor/glm"]
 	path = Mika/vendor/glm
 	url = https://github.com/g-truc/glm
+[submodule "Mika/vendor/GLFW"]
+	path = Mika/vendor/GLFW
+	url = https://github.com/JuiYuHung-craftcat/glfw

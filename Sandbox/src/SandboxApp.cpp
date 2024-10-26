@@ -1,5 +1,7 @@
 #include <Mika.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public Mika::Layer
 {
 public:
@@ -12,6 +14,13 @@ public:
 	{
 		if (Mika::Input::IsKeyPressed(MK_KEY_TAB))
 			MIKA_TRACE("Tab key is pressed (poll)!");
+	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
 	}
 
 	void OnEvent(Mika::Event& event) override
@@ -32,7 +41,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Mika::ImGuiLayer());
 	}
 	~Sandbox()
 	{

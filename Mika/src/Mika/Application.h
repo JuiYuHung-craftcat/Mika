@@ -7,6 +7,8 @@
 #include "Mika/Events/Event.h"
 #include "Mika/Events/ApplicationEvent.h"
 
+#include "Mika/ImGui/ImGuiLayer.h"
+
 namespace Mika {
 
 	class MIKA_API Application
@@ -29,6 +31,7 @@ namespace Mika {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

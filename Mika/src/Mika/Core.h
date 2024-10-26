@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef MK_PLATFORM_WINDOWS
+#if HZ_DYNAMIC_LINK
 	#ifdef MK_BUILD_DLL
 		#define MIKA_API __declspec(dllexport)
 	#else
 		#define MIKA_API __declspec(dllimport)
 	#endif
+#else
+	#define MIKA_API
+#endif
 #else
 	#error Mika only supports Windows!
 #endif
