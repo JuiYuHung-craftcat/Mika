@@ -63,8 +63,7 @@ project "Mika"
 		"GLFW",
 		"Glad",
 		"ImGui",
-		"opengl32.lib",
-		"dwmapi.lib"
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -75,6 +74,11 @@ project "Mika"
 			"MK_PLATFORM_WINDOWS",
 			"MK_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
+		}
+
+		buildoptions 
+		{
+			"/source-charset:utf-8"
 		}
 
 	filter "configurations:Debug"
@@ -127,6 +131,11 @@ project "Sandbox"
 		defines
 		{
 			"MK_PLATFORM_WINDOWS"
+		}
+		
+		buildoptions 
+		{
+			"/source-charset:utf-8"
 		}
 
 	filter "configurations:Debug"
