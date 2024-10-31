@@ -6,4 +6,6 @@ Mika/vendor/Glad/bin/
 
 # Files
 *.user
+*.vcxproj
+*.filters
 SandBox/imgui.ini
