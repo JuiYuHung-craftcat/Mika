@@ -1,7 +1,8 @@
 # Directories
 .vs/
-bin/
+/bin/
 bin-int/
+Mika/vendor/Glad/bin/
 
 # Files
 *.user
