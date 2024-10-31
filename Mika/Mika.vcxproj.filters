@@ -13,8 +13,14 @@
     <Filter Include="src\Mika\ImGui">
       <UniqueIdentifier>{A8F049C8-94BE-3DCE-7D52-AEF469BF1933}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Mika\Renderer">
+      <UniqueIdentifier>{64F6E393-D00C-E229-1984-6D4B85D9B2B1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\OpenGL">
+      <UniqueIdentifier>{35A49437-A105-7245-2A73-B8F796D3A804}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Platform\Windows">
       <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
@@ -87,8 +93,17 @@
     <ClInclude Include="src\Mika\MouseButtonCodes.h">
       <Filter>src\Mika</Filter>
     </ClInclude>
+    <ClInclude Include="src\Mika\Renderer\GraphicsContext.h">
+      <Filter>src\Mika\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mika\Renderer\Shader.h">
+      <Filter>src\Mika\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Mika\Window.h">
       <Filter>src\Mika</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsInput.h">
       <Filter>src\Platform\Windows</Filter>
@@ -1366,6 +1381,12 @@
     </ClCompile>
     <ClCompile Include="src\Mika\Log.cpp">
       <Filter>src\Mika</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mika\Renderer\Shader.cpp">
+      <Filter>src\Mika\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Platform\Windows</Filter>

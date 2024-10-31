@@ -26,11 +26,11 @@ namespace Mika {
 #define MIKA_CORE_INFO(...)    ::Mika::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define MIKA_CORE_WARN(...)    ::Mika::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define MIKA_CORE_ERROR(...)   ::Mika::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define MIKA_CORE_FATAL(...)   ::Mika::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define MIKA_CORE_FATAL(...)   ::Mika::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client log macros
 #define MIKA_TRACE(...)        ::Mika::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define MIKA_INFO(...)         ::Mika::Log::GetClientLogger()->info(__VA_ARGS__)
 #define MIKA_WARN(...)         ::Mika::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define MIKA_ERROR(...)        ::Mika::Log::GetClientLogger()->error(__VA_ARGS__)
-#define MIKA_FATAL(...)        ::Mika::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define MIKA_FATAL(...)        ::Mika::Log::GetClientLogger()->critical(__VA_ARGS__)

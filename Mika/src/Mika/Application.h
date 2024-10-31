@@ -9,6 +9,8 @@
 
 #include "Mika/ImGui/ImGuiLayer.h"
 
+#include "Mika/Renderer/Shader.h"
+
 namespace Mika {
 
 	class MIKA_API Application
@@ -36,6 +38,7 @@ namespace Mika {
 		LayerStack m_LayerStack;
 
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		std::unique_ptr<Shader> m_Shader;
 	private:
 		static Application* s_Instance;
 	};
