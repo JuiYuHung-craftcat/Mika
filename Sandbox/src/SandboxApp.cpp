@@ -13,7 +13,7 @@ public:
 	void OnUpdate() override
 	{
 		if (Mika::Input::IsKeyPressed(MK_KEY_TAB))
-			MIKA_TRACE("Tab key is pressed (poll)!");
+			MK_TRACE("Tab key is pressed (poll)!");
 	}
 
 	virtual void OnImGuiRender() override
@@ -29,8 +29,8 @@ public:
 		{
 			Mika::KeyPressedEvent& e = (Mika::KeyPressedEvent&)event;
 			if (e.GetKeyCode() == MK_KEY_TAB)
-				MIKA_TRACE("Tab key is pressed (event)!");
-			MIKA_TRACE("{0}", (char)e.GetKeyCode());
+				MK_TRACE("Tab key is pressed (event)!");
+			MK_TRACE("{0}", (char)e.GetKeyCode());
 		}
 	}
 };

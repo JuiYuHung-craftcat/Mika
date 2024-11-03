@@ -32,7 +32,7 @@ namespace Mika {
 			// We don't need the shader anymore.
 			glDeleteShader(vertexShader);
 
-			MIKA_CORE_ERROR("{0}", infoLog.data());
+			MK_CORE_ERROR("{0}", infoLog.data());
 			MIKA_CORE_ASSERT(false, "Vertex shader compilation failure!");
 			return;
 		}
@@ -63,7 +63,7 @@ namespace Mika {
 			// Either of them. Don't leak shaders.
 			glDeleteShader(vertexShader);
 
-			MIKA_CORE_ERROR("{0}", infoLog.data());
+			MK_CORE_ERROR("{0}", infoLog.data());
 			MIKA_CORE_ASSERT(false, "Fragment shader compilation failure!");
 			return;
 		}
@@ -99,7 +99,7 @@ namespace Mika {
 			glDeleteShader(vertexShader);
 			glDeleteShader(fragmentShader);
 
-			MIKA_CORE_ERROR("{0}", infoLog.data());
+			MK_CORE_ERROR("{0}", infoLog.data());
 			MIKA_CORE_ASSERT(false, "Shader link failure!");
 			return;
 		}

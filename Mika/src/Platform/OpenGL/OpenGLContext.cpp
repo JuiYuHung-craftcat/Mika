@@ -17,10 +17,10 @@ void Mika::OpenGLContext::Init()
 	int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 	MIKA_CORE_ASSERT(status, "Failed to initialize Glad!");
 
-	MIKA_CORE_INFO("OpenGL Infor:");
-	MIKA_CORE_INFO("  Vendor: {0}", (const char*)glGetString(GL_VENDOR));
-	MIKA_CORE_INFO("  Renderer: {0}", (const char*)glGetString(GL_RENDERER));
-	MIKA_CORE_INFO("  Version: {0}", (const char*)glGetString(GL_VERSION));
+	MK_CORE_INFO("OpenGL Infor:");
+	MK_CORE_INFO("  Vendor: {0}", (const char*)glGetString(GL_VENDOR));
+	MK_CORE_INFO("  Renderer: {0}", (const char*)glGetString(GL_RENDERER));
+	MK_CORE_INFO("  Version: {0}", (const char*)glGetString(GL_VERSION));
 }
 
 void Mika::OpenGLContext::SwapBuffers()
