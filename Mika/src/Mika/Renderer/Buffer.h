@@ -41,7 +41,7 @@ namespace Mika {
 		{
 		}
 
-		uint32_t GetComponentCount() const
+		inline uint32_t GetComponentCount() const
 		{
 			switch (Type)
 			{
