@@ -11,11 +11,11 @@ namespace Mika {
 	{
 		switch (Renderer::GetAPI())
 		{
-			case RendererAPI::None:   MIKA_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::OpenGL: return new OpenGLVertexBuffer(vertices, size);
+			case RendererAPI::API::None:   MK_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+			case RendererAPI::API::OpenGL: return new OpenGLVertexBuffer(vertices, size);
 		}
 
-		MIKA_CORE_ASSERT(false, "Unknown RendererAPI!");
+		MK_CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
 	}
 
@@ -23,11 +23,11 @@ namespace Mika {
 	{
 		switch (Renderer::GetAPI())
 		{
-			case RendererAPI::None:   MIKA_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::OpenGL: return new OpenGLIndexBuffer(indices, size);
+			case RendererAPI::API::None:   MK_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+			case RendererAPI::API::OpenGL: return new OpenGLIndexBuffer(indices, size);
 		}
 
-		MIKA_CORE_ASSERT(false, "Unknown RendererAPI!");
+		MK_CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
 	}
 

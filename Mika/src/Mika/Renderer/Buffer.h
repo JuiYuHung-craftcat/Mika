@@ -24,7 +24,7 @@ namespace Mika {
 			case ShaderDataType::Bool:      return 1;
 		}
 
-		MIKA_CORE_ASSERT(false, "Unknown ShaderDataType!");
+		MK_CORE_ASSERT(false, "Unknown ShaderDataType!");
 		return 0;
 	}
 
@@ -58,7 +58,7 @@ namespace Mika {
 				case ShaderDataType::Bool:      return 1;
 			}
 
-			MIKA_CORE_ASSERT(false, "Unknown ShaderDataType!");
+			MK_CORE_ASSERT(false, "Unknown ShaderDataType!");
 			return 0;
 		}
 	};

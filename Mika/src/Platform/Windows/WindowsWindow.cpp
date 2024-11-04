@@ -43,7 +43,7 @@ namespace Mika {
 		{
 			// TODO: glfwTerminate on system shutdown
 			int success = glfwInit();
-			MIKA_CORE_ASSERT(success, "Could not initialize GLFW!");
+			MK_CORE_ASSERT(success, "Could not initialize GLFW!");
 			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}

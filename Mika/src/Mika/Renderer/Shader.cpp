@@ -33,7 +33,7 @@ namespace Mika {
 			glDeleteShader(vertexShader);
 
 			MK_CORE_ERROR("{0}", infoLog.data());
-			MIKA_CORE_ASSERT(false, "Vertex shader compilation failure!");
+			MK_CORE_ASSERT(false, "Vertex shader compilation failure!");
 			return;
 		}
 
@@ -64,7 +64,7 @@ namespace Mika {
 			glDeleteShader(vertexShader);
 
 			MK_CORE_ERROR("{0}", infoLog.data());
-			MIKA_CORE_ASSERT(false, "Fragment shader compilation failure!");
+			MK_CORE_ASSERT(false, "Fragment shader compilation failure!");
 			return;
 		}
 
@@ -100,7 +100,7 @@ namespace Mika {
 			glDeleteShader(fragmentShader);
 
 			MK_CORE_ERROR("{0}", infoLog.data());
-			MIKA_CORE_ASSERT(false, "Shader link failure!");
+			MK_CORE_ASSERT(false, "Shader link failure!");
 			return;
 		}
 

@@ -22,7 +22,7 @@ namespace Mika {
 			case ShaderDataType::Bool:      return GL_BOOL;
 		}
 
-		MIKA_CORE_ASSERT(false, "Unknown ShaderDataType!");
+		MK_CORE_ASSERT(false, "Unknown ShaderDataType!");
 		return 0;
 	}
 
@@ -48,7 +48,7 @@ namespace Mika {
 
 	void OpenGLVertexArray::AddVertexBuffer(const std::shared_ptr<VertexBuffer>& vertexBuffer)
 	{
-		MIKA_CORE_ASSERT(vertexBuffer->GetLayout().GetElements().size(), "Vertex Buffer has no layout!");
+		MK_CORE_ASSERT(vertexBuffer->GetLayout().GetElements().size(), "Vertex Buffer has no layout!");
 
 		glBindVertexArray(m_RendererID);
 		vertexBuffer->Bind();
