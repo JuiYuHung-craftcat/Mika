@@ -13,6 +13,8 @@
 #include "Mika/Renderer/Buffer.h"
 #include "Mika/Renderer/VertexArray.h"
 
+#include "Mika/Renderer/OrthographicCamera.h"
+
 namespace Mika {
 
 	class MIKA_API Application
@@ -44,6 +46,8 @@ namespace Mika {
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
