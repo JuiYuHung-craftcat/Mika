@@ -9,15 +9,9 @@
 
 #include "Mika/ImGui/ImGuiLayer.h"
 
-#include "Mika/Renderer/Shader.h"
-#include "Mika/Renderer/Buffer.h"
-#include "Mika/Renderer/VertexArray.h"
-
-#include "Mika/Renderer/OrthographicCamera.h"
-
 namespace Mika {
 
-	class MIKA_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -40,18 +34,9 @@ namespace Mika {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
-
 
 	// To be defined in CLIENT
 	Application* CreateApplication();
